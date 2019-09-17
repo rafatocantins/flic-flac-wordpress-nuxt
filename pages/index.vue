@@ -1,18 +1,18 @@
 <template>
   <section class="section">
     <div class="columns is-mobile">
-      <pre>{{ title }}</pre>
+      <pre>{{ posts }}</pre>
     </div>
   </section>
 </template>
 
 <script>
-import axios from 'axios'
+import wp from '~/lib/wp'
 
 export default {
   async asyncData({ params }) {
-    const { data } = await axios.get(process.env.apiUrl + '/wp-json/wp/v2/posts')
-    return { title: data }
+    const posts = await wp.posts()
+    return { posts: posts }
   }
 }
 </script>

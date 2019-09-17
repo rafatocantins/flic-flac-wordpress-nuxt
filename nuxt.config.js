@@ -8,7 +8,7 @@ export default {
   */
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
-    apiUrl: 'http://localhost:8888'
+    ApiUrl: 'localhost:8888'
   },
 
   /*
